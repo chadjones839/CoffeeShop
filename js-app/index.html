@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <title>Coffee Shop</title>
 </head>
 <body>
-   <button id="run-button">Run It!</button>
-   <script src="main.js"></script>
+    <div class="coffee-title">
+        <h1>Coffees</h1>
+    </div>
+    <p>Behold! Our vast list of coffees!</p>
+    <section class="coffee-list">
+        
+    </section>
+    <br/>
+    <div class="askContainer">
+        <div class="ask">
+            <p class="impressed">Impressed?</p>
+            <div class="button-options">
+                <div class="yn-button">
+                    <button id="yes-button">Yes</button>  
+                </div>
+                <div class="yn-button">
+                    <button id="no-button">No</button>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="response">
+        <img class="saidYes" src="https://cdn10.bigcommerce.com/s-npe4l/products/1157/images/1335/B-MZ-SMSHD---HIGH__85441.1477602947.1280.1280.jpg?c=2" alt="yes">
+        <img class="saidNo" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/angry-face_1f620.png" alt="no">
+    </div>
+    <p class="runText">Anyways, if you wanna know more about the beans we use, you just gotta click this button to get see them all.</p>
+    <div class="runButton">
+        <button id="run-button">Run It!</button>  
+    </div>
+    <div class="varietal-title">
+        
+    </div>
+    <div class="create-bean">
+        <div class="createButton">
+            <button id="create-button">Add New Varietal</button>  
+        </div>
+        <div class="create-bean-form">
+            <form action="">
+                <div class="row">
+                    <div class="fieldLabel">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input">
+                        <input class="bean-value" name="name" id="name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fieldLabel">
+                        <label for="region">Region</label>
+                    </div>
+                    <div class="input">
+                        <input class="bean-value" id="region" name="region">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fieldLabel">
+                        <label for="notes">Notes</label>
+                    </div>
+                    <div class="input">
+                        <textarea class="bean-value" id="notes" name="notes" placeholder="Write Here..."></textarea>
+                    </div>
+                </div>
+            </form>
+            <div class="createBean__saveBtn">
+                <button id="saveBean" class="save-button" type="button">Save New Varietal</button>
+            </div> 
+        </div>  
+    </div>
+    <section class="beans-list">
+        
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

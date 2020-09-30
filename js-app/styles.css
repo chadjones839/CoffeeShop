@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap');
+
+
+html {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    background: #271701;
+    text-align: center;
+}
+
+.title > h1 {
+    color: white;
+    margin: 0 0 10px 0;
+    padding: 20px 0;
+    font-size: 36px;
+}
+
+.thumbnail {
+    height: 45px;
+    padding-right: 10px;
+    width: auto;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.coffee-list {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.coffee-item {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.coffee__name  {
+    padding: 0;
+    margin: 0;
+}
+
+.coffee__beanName {
+    padding: 0;
+    margin: 0;
+    color: #373737;
+}
+
+.runButton, .createButton {
+    display: flex;
+    justify-content: center;
+}
+
+.runButton, .runText {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.button-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.yn-button {
+    width: 100%;
+    padding: 10px;
+}
+
+#yes-button {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    box-shadow:inset 0px 34px 0px -15px #10a80b;
+    background-color: #10a80b;
+    border-radius:25px;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family:'Bangers', cursive;
+    font-size:22px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #0c7208;
+    outline: none;
+}
+
+#yes-button:hover {
+    background-color:#0e8f0a;
+}
+
+#yes-button:active {
+    position:relative;
+    top:1px;
+}
+
+#no-button {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border-radius:25px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:'Bangers', cursive;
+    font-size:22px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    outline: none;
+}
+
+#no-button:hover {
+    background-color:#b34332;
+}
+
+#no-button:active {
+    position:relative;
+    top:1px;
+}
+
+#run-button {
+    width: 30%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    border-radius:25px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:'Bangers', cursive;
+    font-size:25px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+    outline: none;
+}
+
+#run-button:hover {
+    background-color:#b34332;
+}
+
+#run-button:active {
+    position:relative;
+    top:1px;
+}
+
+.beans-list {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bean-icon {
+    width: 25px;
+    height: auto;
+}
+
+.bean-item {
+    display: flex;
+    justify-content: left;
+    width: 30%;
+    padding: 10px 25px 10px;
+    margin: 20px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.bean-name {
+    margin: 8px 0 0;
+    padding: 0;
+    font-family: 'Bangers', cursive;
+    text-align: left;
+    text-shadow: 0px 0px 10px #FFFFFF;
+}
+
+dl {
+    text-align: left;
+}
+
+dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+}
+
+.coffee-title {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+}
+
+.coffee-title > h1 {
+    margin: 0;
+    padding: 0;
+}
+    
+.varietal-title {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+}
+
+#create-button, 
+.save-button {
+    display: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 24px;
+    height: 0px;
+    line-height: 0px;
+    color: #FFFFFF;
+    font-family: 'Bangers', cursive;
+    width: 300px;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 13px;
+    background-color: #008DDE;
+    box-shadow: 1px 1px 1px 0px #000000;
+    -webkit-box-shadow: 1px 1px 1px 0px #000000;
+    -moz-box-shadow: 1px 1px 1px 0px #000000;
+    text-shadow: 1px 1px 19px #000000;
+    border: solid #337FED 1px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+    
+#create-button:hover,
+.save-button:hover {
+    background: #0CA7FF;
+    border: solid #0CA7FF 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 24px;
+    text-decoration: none;
+}
+
+.create-bean {
+    display: flex;
+    justify-content: center;
+}
+
+.create-bean-form {
+    width: 50%;
+    display: none;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    overflow: wrap;
+}
+
+.createBean__saveBtn {
+    text-align: center;;
+}
+
+.askContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ask {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.response {
+    text-align: center;
+}
+
+.saidYes, .saidNo {
+    display: none;
+    height: 200px;
+    width: auto;
+}
+
+.impressed {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+}

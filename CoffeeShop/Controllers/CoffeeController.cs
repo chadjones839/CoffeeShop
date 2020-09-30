@@ -6,59 +6,59 @@ namespace CoffeeShop.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BeanVarietyController : ControllerBase
+    public class CoffeeController : ControllerBase
     {
-        private readonly IBeanVarietyRepository _beanVarietyRepository;
-        public BeanVarietyController(IBeanVarietyRepository beanVarietyRepository)
+        private readonly ICoffeeRepository _coffeeRepository;
+        public CoffeeController(ICoffeeRepository coffeeRepository)
         {
-            _beanVarietyRepository = beanVarietyRepository;
+            _coffeeRepository = coffeeRepository;
         }
 
-        // https://localhost:5001/api/beanvariety/
+        // https://localhost:5001/api/coffee/
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_beanVarietyRepository.GetAll());
+            return Ok(_coffeeRepository.GetAll());
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/coffee/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var variety = _beanVarietyRepository.Get(id);
-            if (variety == null)
+            var coffee = _coffeeRepository.Get(id);
+            if (coffee == null)
             {
                 return NotFound();
             }
-            return Ok(variety);
+            return Ok(coffee);
         }
 
-        // https://localhost:5001/api/beanvariety/
+        // https://localhost:5001/api/coffee/
         [HttpPost]
-        public IActionResult Post(BeanVariety beanVariety)
+        public IActionResult Post(Coffee coffee)
         {
-            _beanVarietyRepository.Add(beanVariety);
-            return CreatedAtAction("Get", new { id = beanVariety.Id }, beanVariety);
+            _coffeeRepository.Add(coffee);
+            return CreatedAtAction("Get", new { id = coffee.Id }, coffee);
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/coffee/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, BeanVariety beanVariety)
+        public IActionResult Put(int id, Coffee coffee)
         {
-            if (id != beanVariety.Id)
+            if (id != coffee.Id)
             {
                 return BadRequest();
             }
 
-            _beanVarietyRepository.Update(beanVariety);
+            _coffeeRepository.Update(coffee);
             return NoContent();
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/coffee/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _beanVarietyRepository.Delete(id);
+            _coffeeRepository.Delete(id);
             return NoContent();
         }
     }
